@@ -22,7 +22,7 @@ if (userPreference === "sugar-free") {
 // Use a ternary operator to print "Time to restock!" if the number is less than 5, or "We're stocked!" if the number is 5 or more.
 
 // Assuming cansLeft variable holds the number of Monster Energy cans left in the fridge
-let cansLeft = 31; // For example, let's assume there are 3 cans left
+let cansLeft = 31; // For example, let's assume there are 31 cans left
 
 // Using a ternary operator to determine the message based on the number of cans left
 let message = (cansLeft < 5) ? "Time to restock!" : "We're stocked!";
@@ -36,7 +36,7 @@ console.log(message);
 // If the heart rate is below 100 bpm, print "Boost needed!", otherwise, print "Energy levels are high!".
 
 // Assuming currentHeartRate variable holds the user's current heart rate in bpm (beats per minute)
-let currentHeartRate = 900; // For example, let's assume the current heart rate is 90 bpm
+let currentHeartRate = 900; // For example, let's assume the current heart rate is 900 bpm
 
 // Determine if the user should drink a Monster Energy drink based on their heart rate
 let result = (currentHeartRate < 100) ? "Boost needed!" : "Energy levels are high!";
@@ -49,8 +49,14 @@ console.log(result);
 // Monster Energy drinks are best served cold. Given the current temperature, use a ternary to print "Chilled to perfection!" 
 // if the temperature is below or equal to 5°C, or "Needs a cooler!" if above 5°C.
 
-let currentTemp = 4; // Current temperature in °C
-console.log(``);
+// Assuming currentTemperature variable holds the current temperature in Celsius
+let currentTemperature = 12; // For example, let's assume the current temperature is 12°C
+
+// Determine if the Monster Energy drink is chilled to perfection or needs a cooler
+let report = (currentTemperature <= 5) ? "Chilled to perfection!" : "Needs a cooler!";
+
+// Print the message
+console.log(report);
 
 
 // #### Challenge 5: Late Night Coding Session
@@ -59,7 +65,13 @@ console.log(``);
 // otherwise, print "Better stick to water."
 
 // Define the current hour in 24-hour format
-let currentHour = 22; 
+let currentHour = new Date().getHours();
+
+// Determine if it's a good idea to have a Monster Energy drink based on the current hour
+let outcome = (currentHour >= 20 && currentHour < 24) ? "Unleash the beast!" : "Better stick to water.";
+
+// Print the message
+console.log(outcome); 
 
 // Write your code below this line to determine if it's a good idea to have a Monster Energy drink based on the current hour
 // If it's between 7am and midnight (24-hour format), print "Unleash the beast!"
